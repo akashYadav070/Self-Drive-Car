@@ -1,3 +1,5 @@
+import { FcGoogle } from "react-icons/fc";
+import { FaSquareFacebook } from "react-icons/fa6";
 import { GoogleAuthProvider, signInWithPopup, getAuth } from "@firebase/auth";
 import { app } from "../firebase";
 import { signInFailure, signInSuccess } from "../redux/user/userSlice";
@@ -46,14 +48,14 @@ function OAuth() {
         type="button"
         onClick={handleGoogleClick}
       >
-        <span className="icon-[devicon--google]"></span>
+        <span className="icon-[devicon--google]"><FcGoogle /></span>
         <span>Continue with Google</span>
       </button>
       <button
         className="flex w-full gap-3 justify-center pl-4 border  py-3 rounded-md  items-center border-black"
         type="button"
       >
-        <span className="icon-[logos--facebook]"></span>
+        <span className="icon-[logos--facebook]"><FaSquareFacebook /></span>
         <span>Continue with Facebook</span>
       </button>
     </div>
