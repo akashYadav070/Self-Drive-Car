@@ -15,16 +15,12 @@ const App = express();
 App.use(express.json());
 App.use(cookieParser());
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((error) => console.error(error));
-
-App.listen(port, () => {
-  console.log("server listening !");
-});
 
 const allowedOrigins = ['https://rent-a-ride-two.vercel.app', 'http://localhost:5173'];
 
@@ -51,4 +47,8 @@ App.use((err, req, res, next) => {
     message,
     statusCode,
   });
+});
+
+App.listen(port, () => {
+  console.log(`Server listening on port ${port}!`);
 });
