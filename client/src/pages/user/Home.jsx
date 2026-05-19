@@ -45,9 +45,9 @@ function Home() {
       {isSweetAlert && sweetalert()}
 
       {/* This is div is the container for the dot background */}
-      <div className="relative h-[100vh] w-full mx-auto sm:max-w-[900px] lg:max-w-[1500px] bg-white min-h-[72vh] md:min-h-[60vh] lg:min-h-[73vh]">
+      <div className="relative  w-full mx-auto sm:max-w-[900px] lg:max-w-[1500px] bg-white min-h-[72vh] md:min-h-[60vh] lg:min-h-[73vh]">
         <div
-          className={`px-12 lg:px-28 absolute top-0   z-10 w-full   justify-between items-center flex flex-col  sm:flex-row mt-[50px] md:mt-[170px] gap-10`}
+          className={`px-12 lg:px-28 absolute top-0   z-10 w-full   justify-between items-center flex flex-col  sm:flex-row mt-[10px] md:mt-[70px] gap-10`}
         >
           <div className="">
             <p className={`py-2 text-[9px] md:text-[12px] ${styles.paragraph}`}>
